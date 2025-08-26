@@ -1,34 +1,32 @@
-<!-- announcement bar will always be at the top so if you want to remove it, you have to remove the code from every single file
-    which is quite the work, so i'd recommend u just put placeholder text and then remove the button if u have no link
-    comment the button code by doing (cmd + /) or (ctrl + /)
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Donate</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Donate | INTEGIRLS Bangalore</title>
     <style>
         :root {
-            --primary-color: #5e4d9e;
-            --dark-color: #2c1b2d;
-            --light-color: #C69AA4;
-            --notsolight-color: #B58A94;
+            --primary-green: #3CB371;
+            --dark-green: #2E8B57;
+            --lavender: #E6E6FA;
+            --deep-lavender: #9370DB;
             --white-color: #ffffff;
+            --black-color: #000000;
             --header-font: 'Montserrat', sans-serif;
             --body-font: 'Lato', sans-serif;
             margin: 0 auto;
             padding: 0 0px;
         }
-        
+
         body {
             margin: 0;
             font-family: var(--body-font);
+            background-color: var(--lavender);
         }
 
         .announcement {
             position: fixed;
+            top: 0;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -36,34 +34,48 @@
             align-items: center;
             height: 9vh;
             text-align: center;
-            background-color: pink; /* changes the color of the header box */
+            background-color: var(--primary-green);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
             z-index: 9999;
+            padding: 0 1rem;
         }
 
         .announcement span {
-            color: black;
+            color: var(--white-color);
+            font-weight: 600;
+            font-size: 1.1rem;
             margin: 0;
             padding: 0;
         }
 
         .announcement button {
             padding: 10px 30px;
-            background-color: pink; /* changes the color of the button */
-            color: black; /* changes the color of the text inside the button */
+            background-color: var(--deep-lavender);
+            color: var(--white-color);
             border-radius: 5px;
-            border-width: 1px;
+            border: none;
             cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .announcement button:hover {
+            background-color: var(--lavender);
+            color: var(--dark-green);
+        }
+
+        a {
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-
     <div class="announcement">
         <span>
-            2025 Winter Math Competition and Camp
+            INTEGIRLS India Bangalore Chapter - 2025 Winter Math Competition and Camp
         </span>
-        <!-- insert the link of whatever you want the button to lead to, like a competition registration form -->
-        <a href="">
+        <!-- Update the href to the actual registration link -->
+        <a href="https://example.com/register" target="_blank" rel="noopener noreferrer">
             <button>REGISTER</button>
         </a>
     </div>
